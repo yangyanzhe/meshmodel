@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset=utf-8>
+		<title>Mesh Rendering</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<script src="js/three.min.js"></script>
+		<script src="js/stats.min.js"></script>
+		<script src="js/OBJLoader.js"></script>
+		<script src="js/UnpackDepthRGBAShader.js"></script>
+		<script src="js/CombinedCamera.js"></script>
+		<script src="js/ShadowMapViewer.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/render.js"></script>
+		<script src="js/toolbox.js"></script>
+		<script src="js/raytrace.js"></script>
+
+		<div class="toolbox">
+			Realistic Rendering  <br>
+			Author: <a href="http://yangyanzhe.github.io" >Yanzhe Yang</a><br>
+			View: <a href="#" onclick="setOrthographic();return false;"> Orthographic</a> |
+				  <a href="#" onclick="setPerspective();return false;">Perspective</a><br>
+			ShadowLight: <a href="#" onclick="setPointLight(); return false;"> Point </a> |
+				  <a href="#" onclick="setDirectionalLight(); return false;"> Directional </a><br>
+			<!--Texture: <a href="#" onclick="addTexture(); return false;"> addTexture </a> |
+				  <a href="#" onclick="removeTexture(); return false;"> removeTexture </a><br>-->
+			<br/>
+			<div id="fov">Perspective Mode</div>
+		</div>
+
+
+		<script>
+			init();
+			animate();
+			
+		</script>
+	</body>
+</html>
